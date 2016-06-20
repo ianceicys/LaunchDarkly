@@ -26,7 +26,6 @@ namespace HelloDotNet
             if (value)
             {
                 Console.WriteLine("Showing feature for user " + user.Key);
-                Console.WriteLine("Showing feature for event " + user.s);
             }
             else
             {
