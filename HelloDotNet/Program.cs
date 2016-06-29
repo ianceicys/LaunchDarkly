@@ -59,13 +59,15 @@ namespace HelloDotNet
                 else
                 {
                     userswithoutflag++;
+                    ldClient.Track("new-wizbang-feature", user, "Feature Not Enabled");
                     Console.WriteLine("NOT showing feature for user " + user.Key);
                 }
             }
             client.Flush();
-            Console.WriteLine(userswithflag+" Users Shown Flag");
-            Console.WriteLine(userswithoutflag + " Users NOT Shown Flag");
-
+            Console.WriteLine();
+            Console.WriteLine("Users Shown Flag = " +userswithflag);
+            Console.WriteLine("Users NOT Shown Flag = "+userswithoutflag);
+            Console.WriteLine();
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
